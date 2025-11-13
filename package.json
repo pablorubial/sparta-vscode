@@ -1,0 +1,25 @@
+{
+  "name": "sparta",
+  "displayName": "SPARTA",
+  "description": "SPARTA programming",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.106.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "SPARTA programming API",
+      "aliases": ["SPARTA", "SPARTA programming API"],
+      "extensions": [".spt"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "SPARTA programming API",
+      "scopeName": "source.spt",
+      "path": "./syntaxes/SPARTA programming API.tmLanguage.json"
+    }]
+  }
+}
