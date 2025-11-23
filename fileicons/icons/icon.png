@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 256 256"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="icon.png"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="3.1523438"
+     inkscape:cx="128.15861"
+     inkscape:cy="128"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="1072"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <!-- Background -->
+  <defs
+     id="defs4">
+    <linearGradient
+       id="bg-gradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         stop-color="#0b1020"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#152b4a"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="particle-gradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#4fd1c5"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#63b3ed"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <rect
+     x="0"
+     y="0"
+     width="256"
+     height="256"
+     rx="32"
+     fill="url(#bg-gradient)"
+     id="rect4" />
+  <!-- Stylized "molecular flow" arcs -->
+  <path
+     d="M30 170 C80 130, 130 130, 226 90"
+     fill="none"
+     stroke="#4fd1c5"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-dasharray="4 6"
+     opacity="0.9"
+     id="path4" />
+  <path
+     d="M30 190 C90 150, 150 140, 226 110"
+     fill="none"
+     stroke="#63b3ed"
+     stroke-width="3"
+     stroke-linecap="round"
+     stroke-dasharray="2 5"
+     opacity="0.8"
+     id="path5" />
+  <!-- Particles along the flow -->
+  <circle
+     cx="60"
+     cy="162"
+     r="4"
+     fill="url(#particle-gradient)"
+     id="circle5" />
+  <circle
+     cx="110"
+     cy="144"
+     r="4"
+     fill="url(#particle-gradient)"
+     id="circle6" />
+  <circle
+     cx="155"
+     cy="132"
+     r="4"
+     fill="url(#particle-gradient)"
+     id="circle7" />
+  <circle
+     cx="205"
+     cy="112"
+     r="4"
+     fill="url(#particle-gradient)"
+     id="circle8" />
+  <!-- Text "DSMC" -->
+  <text
+     x="50%"
+     y="45%"
+     text-anchor="middle"
+     font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+     font-size="64"
+     fill="#e2e8f0"
+     font-weight="700"
+     id="text8">
+    DSMC
+  </text>
+  <!-- Small subtitle "SPARTA" -->
+  <text
+     x="50%"
+     y="64%"
+     text-anchor="middle"
+     font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+     font-size="22"
+     fill="#a0aec0"
+     letter-spacing="4"
+     id="text9">
+    SPARTA
+  </text>
+</svg>

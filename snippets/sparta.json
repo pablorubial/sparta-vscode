@@ -1,0 +1,27 @@
+{
+  "SPARTA fix ave/surf": {
+    "prefix": "fixsurf",
+    "body": [
+      "fix\t${1:id}\tave/surf\t${2:group}\t${3:Nevery}\t${4:Nrepeat}\t${5:Nfreq}\tc_${6:compute_id}[*]"
+    ],
+    "description": "SPARTA: fix ave/surf for averaging surf compute"
+  },
+
+  "SPARTA compute + fix pair (grid)": {
+    "prefix": "compfixgrid",
+    "body": [
+      "compute\t${1:comp_id} grid tall air\tnrho\tmassrho tu tv tw tn",
+      "fix\t${2:fix_id tave/grid all 1 500 500 c_${1}[*]"
+    ],
+    "description": "SPARTA: compute grid + matching ave/grid fix (c_comp_id[*])"
+  },
+
+  "SPARTA compute + fix pair (surf)": {
+    "prefix": "compfixsurf",
+    "body": [
+      "compute\t${1:comp_id}\tsurf\t${2:group}\tair\tpx\tpy\tpz\tpress",
+      "fix\t${3:fix_id}\tave/surf\t${2}\t1\t500\t500\tc_${1}[*]"
+    ],
+    "description": "SPARTA: compute surf + matching ave/surf fix (shared group & c_comp_id[*])"
+  }
+}

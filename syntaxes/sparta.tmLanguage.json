@@ -1,0 +1,74 @@
+{
+  "_comment": "Main SPARTA TextMate grammar",
+  "scopeName": "source.sparta",
+
+  "patterns": [
+    { "_comment": "Detect comments", "include": "#comments" },
+    { "_comment": "Detect main commands", "include": "#keywords" },
+    { "_comment": "Detect compute/fix/dump outputs", "include": "#objects" },
+    { "_comment": "Detect variables", "include": "#variables" },
+    { "_comment": "Detect numbers", "include": "#numbers" },
+    { "_comment": "Detect quoted strings", "include": "#strings" }
+  ],
+
+  "repository": {
+    "_comment_comments": "All comment syntax",
+    "comments": {
+      "patterns": [
+        { "name": "comment.line.number-sign.sparta", "match": "#.*$" }
+      ]
+    },
+
+    "_comment_keywords": "SPARTA core commands",
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.sparta",
+          "match": "^\\s*\\b(?:seed|dimension|units|global|boundary|create_box|create_grid|balance_grid|region|read_surf|surf_modify|group|surf_collide|species|species_modify|mixture|collide|collide_modify|create_particles|timestep|compute|fix|dump|stats|stats_style|stats_modify|variable|label|if|print|run|quit)\\b"
+        }
+      ]
+    },
+
+    "_comment_objects": "compute/fix/dump index-style objects",
+    "objects": {
+      "patterns": [
+        {
+          "name": "variable.other.sparta-object",
+          "match": "\\b(?:[cf]_\\d+\\[[^\\]]*\\])\\b"
+        },
+        
+        {
+        "name": "variable.parameter.sparta-compute-ref",
+        "match": "\\bc_(\\d+)\\b"
+        },
+        
+        {
+        "name": "variable.parameter.sparta-fix-ref",
+        "match": "\\bf_(\\d+)\\b"
+        }
+      ]
+    },
+
+    "_comment_variables": "SPARTA variables: ${var}, v_var",
+    "variables": {
+      "patterns": [
+        { "name": "variable.other.sparta", "match": "\\$\\{?[A-Za-z0-9_]+\\}?" },
+        { "name": "variable.language.sparta", "match": "\\bv_[A-Za-z0-9_]+\\b" }
+      ]
+    },
+
+    "_comment_numbers": "Integer / float / scientific numbers",
+    "numbers": {
+      "patterns": [
+        { "name": "constant.numeric.sparta", "match": "\\b\\d+(?:\\.\\d+)?(?:[eE][+-]?\\d+)?\\b" }
+      ]
+    },
+
+    "_comment_strings": "Double-quoted strings",
+    "strings": {
+      "patterns": [
+        { "name": "string.quoted.double.sparta", "begin": "\"", "end": "\"" }
+      ]
+    }
+  }
+}

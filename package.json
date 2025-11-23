@@ -1,25 +1,55 @@
 {
-  "name": "sparta",
+  "name": "sparta-vscode",
   "displayName": "SPARTA",
-  "description": "SPARTA programming",
+  "description": "Syntax highlighting and snippets for SPARTA input files",
   "version": "0.0.1",
+  "publisher": "pablo",
+  "main": "./out/extension.js", 
+  "activationEvents": [
+    "onLanguage:sparta"
+  ],
   "engines": {
     "vscode": "^1.106.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  
   "contributes": {
-    "languages": [{
-      "id": "SPARTA programming API",
-      "aliases": ["SPARTA", "SPARTA programming API"],
-      "extensions": [".spt"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "SPARTA programming API",
-      "scopeName": "source.spt",
-      "path": "./syntaxes/SPARTA programming API.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "sparta",
+        "aliases": ["SPARTA", "sparta"],
+        "extensions": [".in", ".simulation", ".sparta", ".coarse", "medium", ".fine", ".extremely_fine"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./fileicons/icons/icon.svg",
+          "dark": "./fileicons/icons/icon.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sparta",
+        "scopeName": "source.sparta",
+        "path": "./syntaxes/sparta.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sparta",
+        "path": "./snippets/sparta.json"
+      }
+    ]
+  },
+
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/vscode": "^1.106.0"
+  },
+
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
   }
 }

@@ -1,0 +1,9 @@
+<svg width="16" height="16" viewBox="0 0 16 16"
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="16" height="16" rx="2" fill="#0b1020"/>
+
+  <!-- tiny DSMC particles -->
+  <circle cx="5" cy="6" r="2.2" fill="#4fd1c5"/>
+  <circle cx="11" cy="6" r="2.2" fill="#63b3ed"/>
+  <circle cx="8" cy="10" r="2.2" fill="#4fd1c5"/>
+</svg>
